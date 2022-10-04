@@ -1,0 +1,8 @@
+
+<nav>
+    <ul>
+        <li><a routerLink="/">main</a></li>
+        <li><a routerLink="/login" *ngIf="!estaLogeado">login</a></li>
+        <button type="button" (click)="onLogOut()" *ngIf="estaLogeado">logout</button>
+    </ul>
+</nav>

@@ -1,0 +1,9 @@
+<form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+    <label for="nombre">nombre de la skill</label>
+    <input type="text" [(ngModel)]="nombre" id="nombre" name="nombre" required>
+    <label for="imagen">imagen</label>
+    <input type="text" [(ngModel)]="imagen" id="imagen" name="imagen" required> 
+    <label for="nivel">Nivel</label>
+    <input type="text" [(ngModel)]="nivelSkill" id="nivel" name="nivel" required> 
+    <button type="submit">agregar</button>
+</form>

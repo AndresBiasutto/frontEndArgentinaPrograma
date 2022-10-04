@@ -1,0 +1,12 @@
+<h2>educacion</h2>
+<button routerLink="/agregaredu" *ngIf="estaLogeado">agregar educacion</button>
+<div *ngFor="let edu of educacion">
+    <p>escuela: {{edu.institucion}}</p>
+    <p>descripcion: {{edu.descripcion}}</p>
+    <p>desde: {{edu.fechaInicio}}</p>
+    <p>hasta: {{edu.fechaFin}}</p>
+    <p>imagen: {{edu.imagen}}</p>
+    <p>titulo: {{edu.titulo}}</p>
+    <button *ngIf="estaLogeado" routerLink="/editaredu/{{edu.id}}">editar</button>
+    <button *ngIf="estaLogeado" (click)="delete(edu.id)" >borrar</button>
+</div>

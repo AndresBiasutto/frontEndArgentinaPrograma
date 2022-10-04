@@ -1,0 +1,9 @@
+<h2>Skills</h2>
+<button routerLink="/agregarskill" *ngIf="estaLogeado">agregar skill</button>
+<div *ngFor="let skill of skills">
+    <p >skill: {{skill.nombre}}</p>
+    <p>nivel: {{skill.nivelSkill}}</p>
+    <p>imagen: {{skill.imagen}}</p>
+    <button *ngIf="estaLogeado" routerLink="/editarskill/{{skill.id}}">editar</button>
+    <button *ngIf="estaLogeado" (click)="delete(skill.id)" >borrar</button>
+</div>

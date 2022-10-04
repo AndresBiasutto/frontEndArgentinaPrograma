@@ -1,0 +1,9 @@
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+    <label for="nombre">cambia el nombre de la institucion</label>
+    <input type="text" [(ngModel)]="contactos.nombre" id="nombre" name="nombre" required>
+    <label for="imagen">imagen</label>
+    <input type="text" [(ngModel)]="contactos.imagen" id="imagen" name="imagen" required> 
+    <label for="descripcionE">link</label>
+    <input type="text" [(ngModel)]="contactos.link" id="descripcionE" name="descripcionE" required> 
+    <button type="submit">modificar</button>
+</form>

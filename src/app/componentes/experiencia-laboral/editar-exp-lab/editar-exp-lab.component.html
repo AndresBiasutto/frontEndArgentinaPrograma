@@ -1,0 +1,15 @@
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+    <label for="nombreE">nombre de la empresa</label>
+    <input type="text" [(ngModel)]="expLab.empresa" id="nombreE" name="nombreE" required>
+    <label for="descripcion">descripcion</label>
+    <input type="text" [(ngModel)]="expLab.descripcion" id="descripcion" name="descripcion" required> 
+    <label for="fechaInicio">Editar fecha Inicio</label>
+    <input type="text" [(ngModel)]="expLab.fechaInicio" id="fechaInicio" name="fechaInicio" required> 
+    <label for="fechaFin">Editar fecha Fin</label>
+    <input type="text" [(ngModel)]="expLab.fechaFin" id="fechaFin" name="fechaFin" required> 
+    <label for="imagen">Editar imagen</label>
+    <input type="text" [(ngModel)]="expLab.imagen" id="imagen" name="imagen" required> 
+    <label for="descripcion">Editar descripcion</label>
+    <input type="text" [(ngModel)]="expLab.puesto" id="descripcion" name="descripcion" required> 
+    <button type="submit">editar</button>
+</form>

@@ -1,0 +1,9 @@
+<form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+    <label for="nombeContacto">nombre</label>
+    <input type="text" [(ngModel)]="nombre" id="nombeContacto" name="nombeContacto" required>
+    <label for="imagen">imagen</label>
+    <input type="text" [(ngModel)]="imagen" id="imagen" name="imagen" required> 
+    <label for="link">link</label>
+    <input type="text" [(ngModel)]="link" id="link" name="link" required> 
+    <button type="submit">agregar</button>
+</form>

@@ -1,0 +1,12 @@
+<h2>experiencia laboral</h2>
+<button routerLink="/agregarexp" *ngIf="estaLogeado">agregar experiencia laboral</button>
+<div *ngFor="let exp of expe">
+    <p >empresa: {{exp.empresa}}</p>
+    <p>descripcion: {{exp.descripcion}}</p>
+    <p>descripcion: {{exp.fechaInicio}}</p>
+    <p>descripcion: {{exp.fechaFin}}</p>
+    <p>descripcion: {{exp.puesto}}</p>
+    <p>descripcion: {{exp.imagen}}</p>
+    <button *ngIf="estaLogeado" routerLink="/editarexplab/{{exp.id}}">editar</button>
+    <button *ngIf="estaLogeado" (click)="delete(exp.id)" >borrar</button>
+</div>

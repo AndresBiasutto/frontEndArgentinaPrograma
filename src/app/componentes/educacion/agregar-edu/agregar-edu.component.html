@@ -1,0 +1,15 @@
+<form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+    <label for="nombreE">nombre de la institucion</label>
+    <input type="text" [(ngModel)]="institucion" id="nombreE" name="nombreE" required>
+    <label for="descripcionE">descripcion</label>
+    <input type="text" [(ngModel)]="descripcion" id="descripcionE" name="descripcionE" required> 
+    <label for="descripcionE">fecha de inicio</label>
+    <input type="text" [(ngModel)]="fechaInicio" id="descripcionE" name="descripcionE" required> 
+    <label for="descripcionE">fecha de finalizacion</label>
+    <input type="text" [(ngModel)]="fechaFin" id="descripcionE" name="descripcionE" required> 
+    <label for="descripcionE">Url de imagen</label>
+    <input type="text" [(ngModel)]="imagen" id="descripcionE" name="descripcionE" required> 
+    <label for="descripcionE">Titulo obtenido</label>
+    <input type="text" [(ngModel)]="titulo" id="descripcionE" name="descripcionE" required> 
+    <button type="submit">agregar</button>
+</form>

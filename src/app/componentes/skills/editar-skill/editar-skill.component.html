@@ -1,0 +1,9 @@
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+    <label for="nombreE">Editar nombre skill</label>
+    <input type="text" [(ngModel)]="skill.nombre" id="nombreE" name="nombreE" required>
+    <label for="descripcionE">editar nivel</label>
+    <input type="text" [(ngModel)]="skill.nivelSkill" id="descripcionE" name="descripcionE" required>
+    <label for="descripcionE">cambiar imagen</label>
+    <input type="text" [(ngModel)]="skill.imagen" id="descripcionE" name="descripcionE" required> 
+    <button type="submit">editar</button>
+</form>

@@ -1,0 +1,10 @@
+<h2>Contactos</h2>
+<button routerLink="/agregarcontacto" *ngIf="estaLogeado">agregar contacto</button>
+<div *ngFor="let contacto of contactos">
+    <p>nombre: {{contacto.nombre}}</p>
+    <p>imagen: {{contacto.imagen}}</p>
+    <p>link: {{contacto.link}}</p>
+
+    <button *ngIf="estaLogeado" routerLink="/editarcontacto/{{contacto.id}}">editar</button>
+    <button *ngIf="estaLogeado" (click)="delete(contacto.id)" >borrar</button>
+</div>

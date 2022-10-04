@@ -1,1 +1,70 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=K2D&display=swap');
+
+:root{
+    --titulos: 'Bebas Neue', cursive;
+    --parrafos: 'K2D', sans-serif;
+    --amarillo: #F28705;
+    --azul: #5B89A6;
+    --celeste: #A3C9D9;
+    --naranja: #D99255;
+    --rojo: #D91E1E;
+    --negro: #202020;
+    --blanco: #e9e9e9;
+}
+html {
+    box-sizing: border-box;
+    min-height: 100%;
+    scroll-snap-type: y mandatory;
+    font-size: 62.5%; 
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+}
+p {
+    line-height: 1.3;
+    color: var(--blanco);
+}
+body {
+    min-height: 100%;
+    font-size: 1.6rem;
+    font-family: var(--parrafos);
+    background-color: var(--negro);
+}
+body::-webkit-scrollbar{
+    background-color: var(--amarillo);
+    width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--negro);
+}
+h1,h2,h3,h4{
+    line-height: 1.1;
+    font-family: var(--titulos);
+    color: var(--azul);
+}
+h1{
+    font-size: 8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3rem;
+}
+h4{
+    font-size: 2.3rem;
+}
+p{
+    text-align: left;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.contenedor{
+    margin: 0 10rem;
+}
