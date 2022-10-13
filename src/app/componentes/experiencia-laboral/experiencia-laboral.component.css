@@ -1,0 +1,46 @@
+.experiencia-laboral{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.caja-experiencia{
+    background-color: var(--celeste);
+    margin: 2rem;
+    padding: 1rem;
+    box-shadow: 1rem 1rem 0 var(--azul);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+}
+.imagen{
+    width: 10rem;
+    border-radius: 100%;
+}
+.span{
+    color: var(--azul);
+}
+.desde-hasta{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+}
+.caja-interior{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width: 992px) {
+    .caja-interior{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .caja-experiencia{
+        max-width: 60%;
+        width: 60%;
+    }
+}

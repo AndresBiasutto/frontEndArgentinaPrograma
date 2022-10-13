@@ -10,12 +10,12 @@ import { SexperienciaService } from 'src/app/servicios/sexperiencia.service';
 })
 export class AgregarExpLabComponent implements OnInit {
 
-  empresa: string = '';
-  descripcion: string = '';
-  fechaInicio: string = '';
-  fechaFin: string = '';
-  puesto: string = '';
-  imagen: string = '';
+  empresa: string = "";
+  descripcion: string = "";
+  fechaInicio: string = "";
+  fechaFin: string = "";
+  puesto: string = "";
+  imagen: string = "";
 
   constructor(private sExperiencia: SexperienciaService, private router: Router) { }
 
@@ -23,10 +23,16 @@ export class AgregarExpLabComponent implements OnInit {
   }
 
   onCreate(): void {
-    const expe = new ExperienciaLaboral(this.empresa, this.descripcion, this.fechaInicio, this.fechaFin, this.puesto, this.imagen);
-    this.sExperiencia.save(expe).subscribe(
+    
+    const experiencia = new ExperienciaLaboral(this.empresa
+      , this.descripcion
+      , this.fechaInicio
+      , this.fechaFin
+      , this.puesto
+      , this.imagen);
+    this.sExperiencia.save(experiencia).subscribe(
       data => {
-        alert("Experiencia añadida");
+        alert("experiencia añadida exitosamente")
         this.router.navigate(['']);
       }, err => {
         alert("Falló");
@@ -36,3 +42,14 @@ export class AgregarExpLabComponent implements OnInit {
   }
 
 }
+/*
+this.sExperiencia.save(expe).subscribe(
+      data => {
+        alert("Experiencia añadida");
+        this.router.navigate(['']);
+      }, err => {
+        alert("Falló");
+        this.router.navigate(['']);
+      }
+    )
+*/

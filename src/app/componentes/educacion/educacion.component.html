@@ -1,12 +1,26 @@
-<h2>educacion</h2>
-<button routerLink="/agregaredu" *ngIf="estaLogeado">agregar educacion</button>
-<div *ngFor="let edu of educacion">
-    <p>escuela: {{edu.institucion}}</p>
-    <p>descripcion: {{edu.descripcion}}</p>
-    <p>desde: {{edu.fechaInicio}}</p>
-    <p>hasta: {{edu.fechaFin}}</p>
-    <p>imagen: {{edu.imagen}}</p>
-    <p>titulo: {{edu.titulo}}</p>
-    <button *ngIf="estaLogeado" routerLink="/editaredu/{{edu.id}}">editar</button>
-    <button *ngIf="estaLogeado" (click)="delete(edu.id)" >borrar</button>
-</div>
+
+<section class="educacion">
+    <h2 class="margen-titulos" data-aos="zoom-out">Educacion</h2>
+    <button routerLink="/agregaredu" *ngIf="estaLogeado"  class="boton margen-l">agregar educacion</button>
+    <div *ngFor="let edu of educacion" class="caja-educacion" data-aos="fade-right"
+    data-aos-duration="500">
+        <div class="caja-interior">
+            <div class="titulares">
+                <h3>{{edu.institucion}}</h3>
+                <p><span class="span">Titulo: </span>{{edu.imagen}}</p>
+                <div class="desde-hasta">
+                    <p><span class="span">desde:</span> {{edu.fechaInicio}}</p>
+                    <p><span class="span">hasta:</span> {{edu.fechaFin}}</p>
+                </div>
+                <p>{{edu.descripcion}}</p>
+            </div>
+            <img src="{{edu.titulo}}" alt="" class="imagen">
+        </div>
+
+        <div class="botones">
+            <button *ngIf="estaLogeado" routerLink="/editaredu/{{edu.id}}" class="boton margen-r"><i class="fa-solid fa-pencil"></i></button>
+            <button *ngIf="estaLogeado" (click)="delete(edu.id)"  class="boton"><i class="fa-solid fa-trash"></i></button>
+        </div>
+
+    </div>
+</section>

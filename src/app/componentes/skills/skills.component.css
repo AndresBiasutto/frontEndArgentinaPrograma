@@ -1,0 +1,75 @@
+.skills{
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../assets/fondo.jpg");
+    background-size: cover;
+    
+    background-color: var(--negro);
+    background-attachment: fixed;
+    background-blend-mode: color-dodge;
+}
+.skill-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-around;
+}
+.skill{
+    border: 3px solid var(--amarillo);
+    background-color: var(--negro);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen{
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    filter: grayscale(1);
+    border: .3rem solid var(--blanco);
+    margin: 1rem;
+    transition: .3s all ease-in-out;
+}
+.imagen:hover{
+    filter: grayscale(0);
+    transform: rotate(5deg);
+}
+.botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nombre{
+    text-align: center;
+}
+.barra-nivel{
+    position: relative;
+    height: 10rem;
+    width: 10rem;
+
+    overflow: hidden;
+}
+.circle-progress{
+    height: 10rem;
+    width: 10rem;
+}
+.progreso{
+    content: "";
+    position: absolute;
+    background-color: var(--amarillo);
+    height: 2rem;
+    width: 100%;
+    right: 90%;
+}
+
+

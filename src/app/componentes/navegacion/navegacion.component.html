@@ -1,8 +1,11 @@
 
-<nav>
-    <ul>
-        <li><a routerLink="/">main</a></li>
-        <li><a routerLink="/login" *ngIf="!estaLogeado">login</a></li>
-        <button type="button" (click)="onLogOut()" *ngIf="estaLogeado">logout</button>
+<nav class="navbar cont">
+    <a href="/">
+        <img src="../../../assets/AP-Logo.png" alt="" class="logo">
+    </a>
+    
+    <ul class="navbar__lista">
+        <li class="navbar__boton" *ngIf="!estaLogeado"><a routerLink="/login" ><i class="fa-solid fa-right-to-bracket"></i></a></li>
+        <button type="button" (click)="onLogOut()" *ngIf="estaLogeado" class="navbar__boton logout"><i class="fa-solid fa-right-from-bracket"></i></button>
     </ul>
 </nav>

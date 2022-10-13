@@ -1,0 +1,25 @@
+<app-navegacion></app-navegacion>
+<div class="login-form">
+    <div class="form">
+        <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="form__form">
+            <h2 class="h2">Editar porfolio</h2>
+            <div class="form-grup">
+                <label for="titulo">cambia el titulo</label>
+                <input type="text" [(ngModel)]="porfolio.titulo" id="titulo" name="titulo" required>
+            </div>
+            <div class="form-grup">
+                <label for="tecnologias">tecnologias</label>
+                <input type="text" [(ngModel)]="porfolio.tecnologias" id="tecnologias" name="tecnologias" required>
+            </div>
+            <div class="form-grup">
+                <label for="link">link</label>
+                <input type="text" [(ngModel)]="porfolio.link" id="link" name="link" required>
+            </div>
+            <div class="form-grup">
+                <label for="urlimagen">url imagen</label>
+                <input type="text" [(ngModel)]="porfolio.imagen" id="urlimagen" name="urlimagen" required>
+            </div>
+            <button type="submit" class="boton-login">modificar</button>
+        </form>
+    </div>
+</div>

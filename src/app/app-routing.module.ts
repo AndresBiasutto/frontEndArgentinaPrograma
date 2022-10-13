@@ -6,8 +6,11 @@ import { AgregarEduComponent } from './componentes/educacion/agregar-edu/agregar
 import { EditarEduComponent } from './componentes/educacion/editar-edu/editar-edu.component';
 import { AgregarExpLabComponent } from './componentes/experiencia-laboral/agregar-exp-lab/agregar-exp-lab.component';
 import { EditarExpLabComponent } from './componentes/experiencia-laboral/editar-exp-lab/editar-exp-lab.component';
+import { HeroComponent } from './componentes/hero/hero.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { MainComponent } from './componentes/main/main.component';
+import { AgregarPorfolioComponent } from './componentes/porfolio/agregar-porfolio/agregar-porfolio.component';
+import { EditarPorfolioComponent } from './componentes/porfolio/editar-porfolio/editar-porfolio.component';
 import { AgregarSkillComponent } from './componentes/skills/agregar-skill/agregar-skill.component';
 import { EditarSkillComponent } from './componentes/skills/editar-skill/editar-skill.component';
 
@@ -21,7 +24,10 @@ const routes: Routes = [
   {path:"agregarskill", component:AgregarSkillComponent},
   {path:"editarskill/:id", component:EditarSkillComponent},
   {path:"agregarcontacto", component:AgregarContactoComponent},
-  {path:"editarcontacto/:id", component:EditarContactoComponent}
+  {path:"editarcontacto/:id", component:EditarContactoComponent},
+  {path:"hero", component:HeroComponent},
+  {path:"agregarporf", component:AgregarPorfolioComponent},
+  {path:"editarporf/:id", component:EditarPorfolioComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,99 @@
+.educacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+.educacion__cuadro{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.educacion__cuadro--tarjeta{
+    position: relative;
+    height: 50vh;
+    width: 100vw;
+    background-color:  var(--negro);
+    overflow: hidden;
+    transition: .1s all ease-in-out;
+    
+}
+.educacion__cuadro--tarjeta:hover{
+    transform: translate(-.3rem, -.3rem);
+    /* filter: blur(0) grayscale(0); */
+}
+.imagen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+    transition: .5s all ease;
+    filter: blur(0) grayscale(0);
+}
+.educacion__cuadro--tarjeta:hover> .imagen{
+    filter: blur(5px);
+}
+
+.textos{
+    position: absolute;
+    top: 0;
+    left: -50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-color: rgba(24, 24, 24, 0.705);
+    height: 100%;
+    width: 50%;
+    padding-right: 1rem;
+    transition: .2s all ease-in-out;
+}
+.educacion__cuadro--tarjeta:hover> .textos{
+    top: 0;
+    left: 50%;
+}
+.textos-2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.link{
+    background-color: var(--amarillo);
+    font-size: 1.5rem;
+    color: var(--blanco);
+    padding: 1rem 2rem 1rem 2rem;
+    transition: .2s all ease-in;
+}
+.link:hover{
+    transform: scale(1.03);
+}
+.botones{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+@media (min-width: 992px) {
+    .educacion__cuadro{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .educacion__cuadro--tarjeta{
+        position: relative;
+        height: 50vh;
+        width: 45%;
+        background-color:  var(--negro);
+        overflow: hidden;
+        transition: .3s all ease-in-out;
+        
+    }
+}

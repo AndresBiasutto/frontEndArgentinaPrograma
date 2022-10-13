@@ -1,12 +1,29 @@
-<h2>experiencia laboral</h2>
-<button routerLink="/agregarexp" *ngIf="estaLogeado">agregar experiencia laboral</button>
-<div *ngFor="let exp of expe">
-    <p >empresa: {{exp.empresa}}</p>
-    <p>descripcion: {{exp.descripcion}}</p>
-    <p>descripcion: {{exp.fechaInicio}}</p>
-    <p>descripcion: {{exp.fechaFin}}</p>
-    <p>descripcion: {{exp.puesto}}</p>
-    <p>descripcion: {{exp.imagen}}</p>
-    <button *ngIf="estaLogeado" routerLink="/editarexplab/{{exp.id}}">editar</button>
-    <button *ngIf="estaLogeado" (click)="delete(exp.id)" >borrar</button>
-</div>
+<section class="experiencia-laboral">
+    <h2 class="margen-titulos" data-aos="zoom-out">experiencia laboral</h2>
+    <button routerLink="/agregarexp" *ngIf="estaLogeado"  class="boton margen-l">agregar experiencia laboral</button>
+    <div *ngFor="let exp of expe" class="caja-experiencia" data-aos="fade-left"
+    data-aos-duration="500">
+
+        <div class="caja-interior">
+            <div class="titulares">
+                <h3>{{exp.empresa}}</h3>
+                <p><span class="span">puesto: {{exp.imagen}}</span></p>
+                <div class="desde-hasta">
+                    <!-- <span>{{exp.puesto}}</span> -->
+                    <p><span class="span">desde:</span> {{exp.fechaInicio}}</p>
+                    <p><span class="span">hasta:</span> {{exp.fechaFin}}</p>
+                </div>
+                <p>{{exp.descripcion}}</p>
+            </div>
+            <img src="{{exp.puesto}}" alt="logo trabajador" class="imagen">
+            
+        </div>
+
+        <div class="botones">
+            <button *ngIf="estaLogeado" routerLink="/editarexplab/{{exp.id}}" class="boton margen-r"><i class="fa-solid fa-pencil"></i></button>
+            <button *ngIf="estaLogeado" (click)="delete(exp.id)"  class="boton"><i class="fa-solid fa-trash"></i></button>
+        </div>
+
+    </div>
+</section>
+

@@ -23,7 +23,7 @@ export class SkillsComponent implements OnInit {
     } else {
       this.estaLogeado = false;
     }
-    
+
   }
 
   cargarExperiencia(): void {
@@ -41,5 +41,6 @@ export class SkillsComponent implements OnInit {
       )
     }
   }
+
 
 }

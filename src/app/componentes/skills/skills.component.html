@@ -1,9 +1,28 @@
-<h2>Skills</h2>
-<button routerLink="/agregarskill" *ngIf="estaLogeado">agregar skill</button>
-<div *ngFor="let skill of skills">
-    <p >skill: {{skill.nombre}}</p>
-    <p>nivel: {{skill.nivelSkill}}</p>
-    <p>imagen: {{skill.imagen}}</p>
-    <button *ngIf="estaLogeado" routerLink="/editarskill/{{skill.id}}">editar</button>
-    <button *ngIf="estaLogeado" (click)="delete(skill.id)" >borrar</button>
-</div>
+
+<section class="skills">
+    <h2 class="margen-titulos" data-aos="zoom-out">Skills</h2>
+    <button routerLink="/agregarskill" *ngIf="estaLogeado" class="margin-d boton">agregar skill</button>
+    <div class="skill-box">
+
+        <div class="skill" *ngFor="let skill of skills" data-aos="zoom-out" data-aos-duration="800">
+            <div class="botones">
+                <button *ngIf="estaLogeado" routerLink="/editarskill/{{skill.id}}" class="boton"><i
+                        class="fa-solid fa-pencil"></i></button>
+                <button *ngIf="estaLogeado" (click)="delete(skill.id)" class="boton"><i
+                        class="fa-solid fa-trash"></i></button>
+            </div>
+            <img src="{{skill.imagen}}" class="imagen">
+            <div class="barra-nivel">
+                <circle-progress [percent]="skill.nivelSkill" [radius]="100" [outerStrokeWidth]="16"
+                    [innerStrokeWidth]="8" [outerStrokeColor]="'var(--amarillo)'" [innerStrokeColor]="'var(--celeste)'"
+                    [animation]="true" [animationDuration]="1500" [responsive]="true" backgroundColor="transparent"
+                    backgroundStroke="var(--rojo)" [showTitle]="true" [showSubtitle]="false" title="{{skill.nombre}}"
+                    titleColor="var(--blanco)" titleFontSize="50" [lazy]="true"></circle-progress>
+                {{skill.nivelSkill}}
+            </div>
+
+
+        </div>
+    </div>
+
+</section>

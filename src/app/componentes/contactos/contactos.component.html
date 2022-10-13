@@ -1,10 +1,15 @@
-<h2>Contactos</h2>
-<button routerLink="/agregarcontacto" *ngIf="estaLogeado">agregar contacto</button>
-<div *ngFor="let contacto of contactos">
-    <p>nombre: {{contacto.nombre}}</p>
-    <p>imagen: {{contacto.imagen}}</p>
-    <p>link: {{contacto.link}}</p>
+<div class="contacto">
+    <!-- <button routerLink="/agregarcontacto" *ngIf="estaLogeado">agregar contacto</button> -->
+    <div *ngFor="let contacto of contactos">
+        <div class="contacto__caja">
+            <a href="{{contacto.link}}" target="_blank">
+                <i class="{{contacto.imagen}} icono"></i>
+            </a>
+            <span class="nombre">{{contacto.nombre}}</span>
+        </div>
 
-    <button *ngIf="estaLogeado" routerLink="/editarcontacto/{{contacto.id}}">editar</button>
-    <button *ngIf="estaLogeado" (click)="delete(contacto.id)" >borrar</button>
+
+        <!-- <button *ngIf="estaLogeado" routerLink="/editarcontacto/{{contacto.id}}">editar</button>
+        <button *ngIf="estaLogeado" (click)="delete(contacto.id)">borrar</button> -->
+    </div>
 </div>

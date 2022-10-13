@@ -1,0 +1,160 @@
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--amarillo);
+    position: relative;
+    overflow: hidden;
+}
+
+.nombre {
+    color: var(--negro);
+
+}
+
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, 250%);
+    text-align: center;
+    animation-name: titulo;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-delay: .3s;
+}
+
+.subtitulo {
+
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--negro);
+    animation-name: tituloP;
+    animation-delay: 3.4s;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    transform: scaleY(0);
+
+}
+
+.estrellas {
+    transform: scale(0);
+    animation-name: estrellas;
+    animation-fill-mode: both;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.contactos {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    animation-name: contactos;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    transform: scaleY(0) translate(-50%, -50%);
+}
+
+@keyframes estrellas {
+    0% {
+        transform: scale(1) rotate(0);
+        opacity: .2;
+        filter: blur(1);
+        mix-blend-mode: hue;
+    }
+
+    50% {
+        transform: scale(5) rotate(360deg);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: blur(1);
+        opacity: .2;
+        mix-blend-mode: hue;
+    }
+}
+
+@keyframes titulo {
+    0% {
+        transform: translate(50%, 250%) rotate(-.25turn);
+
+    }
+
+    50% {
+        transform: translate(50%, -50%) rotate(-.25turn);
+
+    }
+
+    66% {
+        transform: translate(50%, -50%);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes tituloP {
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes contactos {
+    100% {
+        transform: scaleY(1) translate(-50%, -50%);
+    }
+}
+
+/*pc*/
+
+@media (min-width: 992px) {
+    .nombre {
+        color: var(--negro);
+        font-size: 8rem;
+    }
+
+    .titulo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(50%, 400%);
+        animation-name: titulo;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease;
+        animation-delay: .3s;
+    }
+
+    @keyframes titulo {
+        0% {
+            transform: translate(50%, 400%) rotate(-.25turn);
+            opacity: 0;
+            filter: blur(3px);
+        }
+
+        50% {
+            transform: translate(50%, -50%) rotate(-.25turn);
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        66% {
+            transform: translate(50%, -50%) rotate(0turn);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) rotate(0turn);
+        }
+
+    }
+
+
+}

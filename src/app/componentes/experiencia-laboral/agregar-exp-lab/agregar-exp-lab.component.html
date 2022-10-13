@@ -1,15 +1,35 @@
-<form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-    <label for="nombreE">nombre de la empresa</label>
-    <input type="text" [(ngModel)]="empresa" id="nombreE" name="nombreE" required>
-    <label for="descripcionE">descripcion</label>
-    <input type="text" [(ngModel)]="descripcion" id="descripcionE" name="descripcionE" required>
-    <label for="descripcionE">fecha Inicio</label>
-    <input type="text" [(ngModel)]="fechaInicio" id="descripcionE" name="descripcionE" required> 
-    <label for="descripcionE">fecha Fin</label>
-    <input type="text" [(ngModel)]="fechaFin" id="descripcionE" name="descripcionE" required> 
-    <label for="descripcionE">imagen</label>
-    <input type="text" [(ngModel)]="imagen" id="descripcionE" name="descripcionE" required> 
-    <label for="descripcionE">descripcion</label>
-    <input type="text" [(ngModel)]="puesto" id="descripcionE" name="descripcionE" required> 
-    <button type="submit">agregar</button>
-</form>
+<app-navegacion></app-navegacion>
+<div class="login-form">
+    <div class="form">
+        <h2 class="h2">Agregar experiencia laboral</h2>
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="form__form">
+            <div class="form-grup">
+                <label for="empresa">empresa</label>
+                <input type="text" [(ngModel)]="empresa" id="empresa" name="empresa" required>
+            </div>
+            <div class="form-grup">
+                <label for="descripcion">descripcion</label>
+                <input type="text" [(ngModel)]="descripcion" id="descripcion" name="descripcion" required>
+            </div>
+            <div class="form-grup">
+                <label for="fechaInicio">fecha Inicio</label>
+                <input type="text" [(ngModel)]="fechaInicio" id="fechaInicio" name="fechaInicio" required>
+            </div>
+            <div class="form-grup">
+                <label for="fechaFin">fecha Fin</label>
+                <input type="text" [(ngModel)]="fechaFin" id="fechaFin" name="fechaFin" required>
+            </div>
+            <div class="form-grup">
+                <label for="puesto">puesto</label>
+                <input type="text" [(ngModel)]="puesto" id="puesto" name="puesto">
+            </div>
+            <div class="form-grup">
+                <label for="imagen">imagen</label>
+                <input type="text" [(ngModel)]="imagen" id="imagen" name="imagen">
+            </div>
+
+            <button type="submit" class="boton-login">agregar</button>
+        </form>
+    </div>
+
+</div>

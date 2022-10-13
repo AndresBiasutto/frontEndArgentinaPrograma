@@ -1,0 +1,26 @@
+<section class="educacion">
+    <h2 class="margen-titulos" data-aos="zoom-out">Porfolio</h2>
+    <button routerLink="/agregarporf" *ngIf="estaLogeado" class="boton margen-l margin-d">agregar trabajo</button>
+    <div class="educacion__cuadro">
+        <div *ngFor="let porf of porfolio" data-aos="flip-up" data-aos-duration="1000"
+            class="educacion__cuadro--tarjeta">
+            <img [src]="porf.tecnologias" alt="" class="imagen">
+
+            <div class="textos">
+                <div class="textos-2">
+                    <h3>{{porf.titulo}}</h3>
+                    <p>Tecnologias usadas:{{porf.imagen}}</p>
+                </div>
+
+                <a href="{{porf.link}}" target="_blank" class="link"><i class="fa-brands fa-github"></i> Ver
+                    repositorio</a>
+            </div>
+
+            <div class="botones">
+                <button *ngIf="estaLogeado" routerLink="/editarporf/{{porf.id}}" class="boton margen-r"><i class="fa-solid fa-pencil"></i></button>
+                <button *ngIf="estaLogeado" (click)="delete(porf.id)" class="boton"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    </div>
+
+</section>

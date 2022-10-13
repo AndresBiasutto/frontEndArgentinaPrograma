@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ExperienciaLaboral } from 'src/app/models/experiencia-laboral';
 import { SexperienciaService } from 'src/app/servicios/sexperiencia.service';
 import { TokenService } from 'src/app/servicios/token.service';
@@ -12,7 +13,7 @@ export class ExperienciaLaboralComponent implements OnInit {
 
   expe: ExperienciaLaboral[] = [];
   estaLogeado = false;
-  constructor(private sExperiencia: SexperienciaService, private tokenService: TokenService) { }
+  constructor(private sExperiencia: SexperienciaService, private tokenService: TokenService, private router:Router) { }
 
 
 

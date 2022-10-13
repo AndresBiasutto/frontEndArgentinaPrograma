@@ -33,11 +33,11 @@ body {
     background-color: var(--negro);
 }
 body::-webkit-scrollbar{
-    background-color: var(--amarillo);
+    background-color: var(--celeste);
     width: 10px;
 }
 body::-webkit-scrollbar-thumb{
-    background-color: var(--negro);
+    background-color: var(--azul);
 }
 h1,h2,h3,h4{
     line-height: 1.1;
@@ -45,7 +45,7 @@ h1,h2,h3,h4{
     color: var(--azul);
 }
 h1{
-    font-size: 8rem;
+    font-size: 5rem;
 }
 h2{
     font-size: 4rem;
@@ -67,4 +67,86 @@ a{
 }
 .contenedor{
     margin: 0 10rem;
+}
+.boton{
+    border: 3px solid var(--blanco);
+    color: var(--blanco);
+    font-size: 1.5rem;
+    background-color: transparent;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: .3s all ease-in-out;
+}
+.boton:hover{
+    transform: scale(1.05);
+    color: var(--rojo);
+    border: 3px solid var(--rojo);
+}
+.margen-l{
+    margin-left: 2rem;
+}
+.margen-r{
+    margin-right: 1rem;
+}
+.margin-d{
+    margin-bottom: 1rem;
+}
+.margen-titulos{
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+.botones{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+/*LOGIN FORM*/
+.login-form{
+    background-color: var(--negro);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.h2{
+    margin-top: 10rem;
+}
+.form{
+    border: 5px solid var(--azul);
+    background-color: var(--amarillo);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+.form__form{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-grup{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    width: 80%;
+}
+.boton-login{
+    width: 80%;
+    background-color: var(--celeste);
+    border: none;
+    padding: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 10rem;
+    cursor: pointer;
+}
+input{
+    border: none;
+    padding: .8rem;
+}
+label{
+    color: var(--blanco);
 }

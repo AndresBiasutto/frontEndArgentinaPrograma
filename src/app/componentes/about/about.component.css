@@ -1,0 +1,104 @@
+.about{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--amarillo);
+}
+.sobre-mi{
+    position: relative;
+    background-color: var(--amarilloSombra);
+    margin-top: 4rem;
+    width: 90%;
+    height: 90%;
+    padding: 5%;
+}
+.h2{
+    color: var(--negro);
+}
+.foto-parrafo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 90%;
+    z-index: 1;
+}
+.parrafo{
+    margin-top: 3rem;
+    position: relative;
+    color: var(--negro);
+}
+.parrafo::after{
+    position: absolute;
+    left: 0;
+    top: 110%;
+    content: "";
+    background-color: var(--blanco);
+    height: 2px;
+    width: 100%; 
+}
+.parrafo::before{
+    position: absolute;
+    left: 0;
+    bottom: 110%;
+    content: "";
+    background-color: var(--blanco);
+    height: 2px;
+    width: 100%;
+}
+.foto{
+    width: 250px;
+    height: 270px;
+    border-radius: 50%;
+    border: 3px solid var(--negro);
+    mix-blend-mode: multiply;
+}
+.editar{
+    background-color: red;
+}
+.editar-escondido{
+    background-color: blue;
+}
+
+/*PC*/
+
+@media (min-width: 992px) {
+    .foto-parrafo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    .foto{
+        border-radius: 0;
+        border: none;
+        height: 100%;
+        width: auto;
+        background-color: transparent;
+        border: 5px solid var(--negro);
+    }
+    .parrafo{
+        width: 50%;
+    }
+}
+.textos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-descarga {
+    text-align: center;
+    color: var(--negro);
+    z-index: 100;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: var(--azul);
+    margin-top: 4rem;
+    color: var(--blanco);
+    transition: .2s all ease-in;
+}
+.btn-descarga:hover{
+    transform: scale(1.1);
+}

@@ -22,4 +22,5 @@ estaLogeado=false;
     this.tokenService.logOut();
     window.location.reload();
   }
+
 }

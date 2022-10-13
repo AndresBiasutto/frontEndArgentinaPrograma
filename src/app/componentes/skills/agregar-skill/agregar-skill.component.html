@@ -1,9 +1,22 @@
-<form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-    <label for="nombre">nombre de la skill</label>
-    <input type="text" [(ngModel)]="nombre" id="nombre" name="nombre" required>
-    <label for="imagen">imagen</label>
-    <input type="text" [(ngModel)]="imagen" id="imagen" name="imagen" required> 
-    <label for="nivel">Nivel</label>
-    <input type="text" [(ngModel)]="nivelSkill" id="nivel" name="nivel" required> 
-    <button type="submit">agregar</button>
-</form>
+<app-navegacion></app-navegacion>
+<div class="login-form">
+    <div class="form">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="form__form">
+            <h2 class="h2">Agregar skill</h2>
+            <div class="form-grup">
+                <label for="nombre">Nombre</label>
+            <input type="text" [(ngModel)]="nombre" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-grup">
+               <label for="imagen">Url imagen</label>
+            <input type="text" [(ngModel)]="imagen" id="imagen" name="imagen" required> 
+            </div>
+            <div class="form-grup">
+               <label for="nivel">Nivel (de 1 a 100)</label>
+            <input type="range" [(ngModel)]="nivelSkill" min="1" max="100" id="nivel" name="nivel" required> 
+            </div>
+            
+            <button type="submit" class="boton-login">agregar</button>
+        </form>
+    </div>
+</div>

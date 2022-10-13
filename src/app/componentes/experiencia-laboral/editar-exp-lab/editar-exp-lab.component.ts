@@ -10,8 +10,7 @@ import { SexperienciaService } from 'src/app/servicios/sexperiencia.service';
 })
 export class EditarExpLabComponent implements OnInit {
   expLab:ExperienciaLaboral=null;
-  nombreE:string=""
-  descripcionE:string=""
+  
   constructor(private sExperiencia: SexperienciaService, private activatedRouter: ActivatedRoute,
     private router: Router) { }
 

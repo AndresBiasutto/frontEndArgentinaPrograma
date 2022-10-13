@@ -1,0 +1,27 @@
+<app-navegacion></app-navegacion>
+<div class="login-form">
+    <div class="form">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="form__form">
+            <h2 class="h2">Agregar trabajo</h2>
+            <div class="form-grup">
+                <label for="titulo">Titulo</label>
+                <input type="text" [(ngModel)]="titulo" id="titulo" name="titulo" required>
+            </div>
+            <div class="form-grup">
+                <label for="tecnologias">tecnologias</label>
+                <input type="text" [(ngModel)]="tecnologias" id="tecnologias" name="tecnologias" required>
+            </div>
+            <div class="form-grup">
+                <label for="link">url link</label>
+                <input type="text" [(ngModel)]="link" id="link" name="link" required>
+            </div>
+            <div class="form-grup">
+                <label for="imagen">url imagen</label>
+                <input type="text" [(ngModel)]="imagen" id="imagen" name="imagen">
+            </div>
+
+
+            <button type="submit" class="boton-login">agregar</button>
+        </form>
+    </div>
+</div>

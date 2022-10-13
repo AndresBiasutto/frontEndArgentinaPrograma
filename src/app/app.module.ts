@@ -20,6 +20,13 @@ import { EditarSkillComponent } from './componentes/skills/editar-skill/editar-s
 import { ContactosComponent } from './componentes/contactos/contactos.component';
 import { AgregarContactoComponent } from './componentes/contactos/agregar-contacto/agregar-contacto.component';
 import { EditarContactoComponent } from './componentes/contactos/editar-contacto/editar-contacto.component';
+import { HeroComponent } from './componentes/hero/hero.component';
+import { AboutComponent } from './componentes/about/about.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
+import { AgregarPorfolioComponent } from './componentes/porfolio/agregar-porfolio/agregar-porfolio.component';
+import { EditarPorfolioComponent } from './componentes/porfolio/editar-porfolio/editar-porfolio.component';
+
 
 @NgModule({
   declarations: [
@@ -38,13 +45,19 @@ import { EditarContactoComponent } from './componentes/contactos/editar-contacto
     EditarSkillComponent,
     ContactosComponent,
     AgregarContactoComponent,
-    EditarContactoComponent
+    EditarContactoComponent,
+    HeroComponent,
+    AboutComponent,
+    PorfolioComponent,
+    AgregarPorfolioComponent,
+    EditarPorfolioComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]

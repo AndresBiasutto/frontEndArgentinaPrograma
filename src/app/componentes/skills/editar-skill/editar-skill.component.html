@@ -1,9 +1,22 @@
-<form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-    <label for="nombreE">Editar nombre skill</label>
-    <input type="text" [(ngModel)]="skill.nombre" id="nombreE" name="nombreE" required>
-    <label for="descripcionE">editar nivel</label>
-    <input type="text" [(ngModel)]="skill.nivelSkill" id="descripcionE" name="descripcionE" required>
-    <label for="descripcionE">cambiar imagen</label>
-    <input type="text" [(ngModel)]="skill.imagen" id="descripcionE" name="descripcionE" required> 
-    <button type="submit">editar</button>
-</form>
+<app-navegacion></app-navegacion>
+<div class="login-form">
+    <div class="form">
+       <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="form__form">
+        <h2 class="h2">Editar skills</h2>
+        <div class="form-grup">
+            <label for="nombre">Editar nombre </label>
+    <input type="text" [(ngModel)]="skill.nombre" id="nombre" name="nombre" required>
+        </div>
+    <div class="form-grup">
+       <label for="nivel">Editar nivel</label>
+    <input type="range" min="1" max="100" [(ngModel)]="skill.nivelSkill" id="nivel" name="nivel" required > 
+    </div>
+    <div class="form-grup">
+      <label for="imagen">Cambiar url de la imagen</label>
+    <input type="text" [(ngModel)]="skill.imagen" id="imagen" name="imagen" required>   
+    </div>
+    
+    <button type="submit" class="boton-login">editar</button>
+</form> 
+    </div>
+</div>
